@@ -1,0 +1,26 @@
+# JSocialFlow Dev.AI
+
+> Desarrollador especializado en Agentes de IA autónomos, sistemas RAG (Retrieval-Augmented Generation), automatización de procesos empresariales con ERP y soluciones Web3.
+
+Este sitio recopila el portfolio técnico, arquitecturas de automatización y laboratorios prácticos de desarrollo de **JSocialFlow** (`jsocialflow.com`), enfocados en transformar flujos operativos manuales en sistemas inteligentes integrados con bases de datos y herramientas corporativas.
+
+## Especialidades y Stack Tecnológico
+
+- **Agentes de IA y Orquestación:** LangChain, LangGraph, n8n, Make, diseño de flujos multi-agente y patrones *Human-in-the-Loop*.
+- **Procesamiento Documental Inteligente (IDP):** Extracción de datos sin plantillas mediante OCR + LLMs multimodales, validación matemática y detección de anomalías.
+- **Integración Empresarial y Datos:** Python, Node.js, APIs REST, SQL, JSON, conciliación automática (3-Way Matching) para ERPs (Odoo, SAP, Holded).
+- **Sistemas RAG y Web3:** Bases de datos vectoriales, búsqueda semántica y desarrollo de contratos inteligentes / dApps.
+
+## Proyectos Destacados (Portfolio)
+
+- [Laboratorio de Desarrollo en YouTube - JSocialFlow DevLab](https://www.youtube.com/@Jsocialflow): Demostraciones técnicas en vídeo sobre arquitectura de agentes, automatización con IA y casos de uso reales.
+
+## Servicios Profesionales
+
+- **Consultoría y Análisis de Procesos (As-Is / To-Be):** Auditoría de cuellos de botella operativos y diseño de arquitecturas de automatización con IA.
+- **Desarrollo a Medida de Agentes de IA:** Implementación de asistentes internos conectados a documentación privada (RAG) y sistemas de gestión.
+
+## Contacto y Enlaces Oficiales
+
+- **Sitio Web:** https://jsocialflow.com
+- **Canal de YouTube:** https://www.youtube.com/@Jsocialflow
