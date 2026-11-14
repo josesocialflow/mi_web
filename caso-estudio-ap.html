@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudio: Agente AP & 3-Way Match | JSocialFlow Dev.AI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#111827',
+                            border: '#1F2937',
+                            accent: '#3B82F6',
+                            accentGlow: '#60A5FA',
+                            text: '#9CA3AF',
+                            light: '#F9FAFB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased selection:bg-brand-accent selection:text-white min-h-screen flex flex-col justify-between relative">
+
+    <!-- CABECERA CON NAVEGACIÓN DE RETORNO -->
+    <header class="max-w-4xl mx-auto w-full px-6 py-6 flex justify-between items-center border-b border-brand-border/60">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
+            <span class="text-brand-accent">JSocialFlow</span> Dev<span class="text-brand-accent">.AI</span>
+        </a>
+        <a href="index.html" class="text-xs font-semibold text-brand-accentGlow hover:underline flex items-center gap-1.5">
+            <span>← Volver al Portfolio</span>
+        </a>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DEL CASO DE ESTUDIO -->
+    <main class="max-w-4xl mx-auto w-full px-6 py-12 flex-grow space-y-16">
+
+        <!-- CABECERA DEL CASO DE ESTUDIO (HERO) -->
+        <section class="space-y-6 pt-2">
+            <div class="flex flex-wrap gap-2 items-center">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                    Python · Agente Autónomo · ERP 3-Way Match
+                </span>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-brand-accentGlow border border-blue-500/20">
+                    Caso de Estudio Flagship
+                </span>
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Automatización Inteligente de Cuentas por Pagar (AP) para Logística Ibérica S.L.
+            </h1>
+
+            <p class="text-base text-brand-text max-w-3xl leading-relaxed">
+                Análisis técnico end-to-end sobre la implementación de un agente autónomo diseñado para procesar facturas en PDF, validar datos fiscales frente a un ERP simulado en JSON y ejecutar una conciliación cruzada de 3 vías (3-Way Match) con gestión de excepciones. Todos los datos sobre proveedores asi como la propia Logística Ibérica, S.l. son ficticios, han sido implementados para este ejercicio.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://github.com/josesocialflow" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-brand-card hover:bg-brand-border border border-brand-border text-white font-medium text-sm rounded-lg transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    Ver Repositorio en GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: DIAGNÓSTICO (AS-IS vs TO-BE) -->
+        <section class="space-y-6 border-t border-brand-border/60 pt-12">
+            <h2 class="text-xl font-bold text-white tracking-tight">1. Diagnóstico y Planteamiento (As-Is vs. To-Be)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 bg-brand-card rounded-xl border border-brand-border/80 space-y-3">
+                    <h3 class="text-sm font-semibold text-rose-400">🔴 Estado Actual (As-Is)</h3>
+                    <p class="text-sm text-brand-text leading-relaxed">
+                        Proceso manual de recepción de facturas en PDF por correo, validación visual lenta contra albaranes y riesgo elevado de errores humanos y pagos duplicados y/o retrasados.
+                    </p>
+                </div>
+
+                <div class="p-5 bg-brand-card rounded-xl border border-brand-border/80 space-y-3">
+                    <h3 class="text-sm font-semibold text-emerald-400">🟢 Solución Propuesta (To-Be)</h3>
+                    <p class="text-sm text-brand-text leading-relaxed">
+                        Agente autónomo orquestado mediante grafos que extrae datos de la factura, consulta el ERP simulado, ejecuta el cruce y automatiza la decisión financiera con intervención humana solo en excepciones.
+                    </p>
+                </div>
+                <!-- BOTÓN DE DESCARGA DE INFORME -->
+            <div class="pt-2">
+                <a href="recursos/Caso_Estudio_Agente_IA_Contabilidad.pdf" download class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-card hover:bg-brand-border border border-brand-border text-white font-medium text-sm rounded-lg transition-colors shadow-sm">
+                    <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    Descargar Informe Técnico de Diagnóstico (PDF)
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ARQUITECTURA TÉCNICA Y 3-WAY MATCH -->
+        <section class="space-y-6 border-t border-brand-border/60 pt-12">
+            <h2 class="text-xl font-bold text-white tracking-tight">2. Arquitectura del Sistema & Lógica 3-Way Match</h2>
+            
+            <div class="p-6 bg-brand-card rounded-xl border border-brand-border/80 space-y-4">
+                <p class="text-sm text-brand-text leading-relaxed">
+                    El sistema se estructura mediante flujos basados en estados (LangGraph) que cruzan matemáticamente los tres documentos fundamentales del ciclo de compras:
+                </p>
+                <ul class="list-disc list-inside text-sm text-brand-text space-y-2 pl-2">
+                    <li><strong class="text-white">Albarán de Entrega (Goods Receipt):</strong> Confirma lo que físicamente llegó al almacén.</li>
+                    <li><strong class="text-white">Factura del Proveedor:</strong> Compara importes, unidades y datos fiscales.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: SEGURIDAD, STAGING Y TRADE-OFFS -->
+        <section class="space-y-6 border-t border-brand-border/60 pt-12">
+            <h2 class="text-xl font-bold text-white tracking-tight">3. Seguridad, Despliegue y Decisiones de Diseño (Trade-offs)</h2>
+            
+            <div class="p-6 bg-brand-card rounded-xl border border-brand-border/80 space-y-4">
+                <p class="text-sm text-brand-text leading-relaxed">
+                    Para llevar este tipo de soluciones a un entorno de producción real, seria necesario contemplar medidas estrictas como:
+                </p>
+                <div class="space-y-3 text-sm text-brand-text">
+                    <p>🛡️ <strong class="text-white">Copias de seguridad & Staging:</strong> Uso de entornos aislados con datos anonimizados para pruebas de estrés previas al ataque sobre producción.</p>
+                    <p>👥 <strong class="text-white">Human-in-the-Loop (HITL):</strong> Interrupción automática del grafo ante discrepancias de importes o datos bancarios no verificados.</p>
+                    <p>⚖️ <strong class="text-white">Trade-offs técnicos:</strong> En este proyecto he optado por la elección de simulación basada en JSON frente a bases de datos relacionales pesadas para priorizar portabilidad y legibilidad educativa en el repositorio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: VÍDEO DEMOSTRATIVO -->
+        <section class="space-y-6 border-t border-brand-border/60 pt-12">
+            <h2 class="text-xl font-bold text-white tracking-tight">4. Vídeo Demostrativo del Proceso</h2>
+            
+            <div class="p-6 bg-brand-card rounded-xl border border-brand-border/80 space-y-4 text-center">
+                <div class="aspect-video bg-brand-dark rounded-lg border border-brand-border flex items-center justify-center">
+                    <span class="text-sm text-brand-text"><!-- Inserta aquí tu iframe de YouTube -->[ Vídeo Demostrativo Próximamente / Enlace de YouTube ]</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-brand-border/40 py-6 text-center text-xs text-brand-text">
+        <p>© 2026 · JSocialFlow Dev.AI — Desarrollador de Agentes de IA & IoT</p>
+    </footer>
+
+</body>
+</html>
